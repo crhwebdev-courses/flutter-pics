@@ -8,7 +8,15 @@ void main() {
   // on the screen
   var app = MaterialApp(
     home: Scaffold(
-      appBar: AppBar(),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          print('Hi there!');
+        },
+      ),
+      appBar: AppBar(
+        title: Text("Let's See some images"),
+      ),
     ),
   );
 
