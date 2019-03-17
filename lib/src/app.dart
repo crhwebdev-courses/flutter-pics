@@ -1,14 +1,16 @@
 // Import flutter helper libarary
 import 'package:flutter/material.dart';
 
+// Create a stateful widget that gets rerendered
 class App extends StatefulWidget {
   createState() {
     return AppState();
   }
 }
 
-// Create a class that will be our custom widget
-// this class must extend the 'StatelessWidget' base class
+// Create AppState object that is cached and not rerendered unless it changes
+// This is returned from App widget every time it is rerendered
+// Class extends State class, which is a generic that takes the type of class it is rendered by
 class AppState extends State<App> {
   int counter = 0;
 
