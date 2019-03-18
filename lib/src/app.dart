@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' show get;
 import 'dart:convert';
 import 'models/image_model.dart';
+import 'widgets/image_list.dart';
 
 // Create a stateful widget that gets rerendered
 class App extends StatefulWidget {
@@ -33,7 +34,7 @@ class AppState extends State<App> {
   Widget build(context) {
     return MaterialApp(
       home: Scaffold(
-        body: Text('$counter'),
+        body: ImageList(images),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: fetchImage,
